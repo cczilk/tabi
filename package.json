@@ -1,0 +1,40 @@
+{
+  "name": "tabi",
+  "version": "1.0.0",
+  "description": "Electron + React music app",
+  "main": "src/main/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "electron .",
+    "dev": "concurrently \"npm:dev:main\" \"npm:dev:renderer\"",
+    "dev:main": "nodemon src/main/index.js",
+    "dev:renderer": "vite --config src/renderer/vite.config.js",
+    "build": "vite build --config src/renderer/vite.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cczilk/tabi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cczilk/tabi/issues"
+  },
+  "homepage": "https://github.com/cczilk/tabi#readme",
+  "dependencies": {
+    "electron": "^38.4.0",
+    "lucide-react": "^0.548.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-hot-toast": "^2.6.0",
+    "sqlite3": "^5.1.7",
+    "yt-dlp-wrap": "^2.3.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.0",
+    "concurrently": "^9.2.1",
+    "vite": "^7.1.12",
+    "nodemon": "^3.0.2"
+  }
+}
