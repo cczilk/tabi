@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "electron .",
-    "dev": "concurrently \"npm:dev:main\" \"npm:dev:renderer\"",
+    "dev": "electron-vite dev",
     "dev:main": "nodemon src/main/index.js",
     "dev:renderer": "vite --config src/renderer/vite.config.js",
     "build": "vite build --config src/renderer/vite.config.js"
@@ -34,7 +34,8 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.0",
     "concurrently": "^9.2.1",
-    "vite": "^7.1.12",
-    "nodemon": "^3.0.2"
+    "electron-vite": "^4.0.1",
+    "nodemon": "^3.0.2",
+    "vite": "^7.1.12"
   }
 }
